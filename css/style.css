@@ -1,3 +1,5 @@
+/* Basic settings */
+
 html {
   box-sizing: border-box;
 }
@@ -30,7 +32,26 @@ body {
   min-width: 1158px;
 }
 
-/* Basic settings */
+.container {
+  margin: 0 auto;
+  max-width: 1158px;
+  padding: 0 15px;
+}
+
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Reset */
 
 .list {
   list-style: none;
@@ -38,6 +59,7 @@ body {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -68,27 +90,7 @@ address {
   font-style: normal;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1158px;
-  padding: 0 15px;
-  /* outline: 2px solid tomato; */
-}
-
 /* Section general settings */
-
-.hidden-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 .section {
   padding-top: 120px;
@@ -288,9 +290,6 @@ address {
 
 /* products content */
 
-.company-products {
-}
-
 .company-products .section-title {
   margin-bottom: 72px;
 }
@@ -300,16 +299,10 @@ address {
   gap: 24px;
 }
 
-.company-products .item {
-}
-
 /* about team */
 
 .owr-team {
   background-color: var(--secondary-background-color);
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .owr-team .section-title {
@@ -493,9 +486,6 @@ address {
 /* Footer */
 
 .footer {
-  /* max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto; */
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--title-text-color);
@@ -524,6 +514,7 @@ address {
 
 .footer-social-media-text {
   color: var(--color-white);
+  margin-bottom: 16px;
 }
 
 .footer-social-media-list {

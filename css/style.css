@@ -168,6 +168,8 @@ address {
   font-weight: 500;
   display: block;
   padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -192,6 +194,8 @@ address {
 
 .adress .link {
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress .link:hover,
@@ -331,6 +335,8 @@ address {
   height: 40px;
   background-color: var(--accent-color);
   border-radius: 50%;
+
+  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-meadia-list .link:is(:hover, :focus) {
@@ -368,6 +374,8 @@ address {
   width: 104px;
   height: 56px;
   fill: var(--subtle-text);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers .item {
@@ -383,6 +391,8 @@ address {
   border-radius: 4px;
   height: 88px;
   width: 100%;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers .link:is(:hover, :focus) {
@@ -419,6 +429,10 @@ address {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio .link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio .link:is(:hover, :focus) {
   display: inline-block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -453,6 +467,8 @@ address {
   letter-spacing: 0.04em;
   cursor: pointer;
   border: 1px solid transparent;
+
+  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.hero-btn {
@@ -474,6 +490,8 @@ address {
   padding: 12px 24px;
   border-color: var(--cornflower-color);
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .button.filter-btn:is(:hover, :focus) {
@@ -533,6 +551,8 @@ address {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-media-icon {

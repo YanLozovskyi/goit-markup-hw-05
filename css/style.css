@@ -20,6 +20,7 @@ html {
   --cornflower-color: #e7e9fc;
   --subtle-text: #8e8f99;
   --success: #31d0aa;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -169,7 +170,7 @@ address {
   display: block;
   padding: 24px 0;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic);
 }
 
 .site-nav .link:hover,
@@ -195,7 +196,7 @@ address {
 .adress .link {
   color: var(--primary-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic);
 }
 
 .adress .link:hover,
@@ -259,11 +260,6 @@ address {
   border-radius: 4px;
   margin-bottom: 8px;
   background-color: var(--secondary-background-color);
-}
-
-.benefits-icon {
-  width: 64px;
-  height: 64px;
 }
 
 /* .company-benefits .item::before {
@@ -336,7 +332,7 @@ address {
   background-color: var(--accent-color);
   border-radius: 50%;
 
-  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 2500ms var(--cubic);
 }
 
 .team-social-meadia-list .link:is(:hover, :focus) {
@@ -344,8 +340,6 @@ address {
 }
 
 .team-social-media-icon {
-  width: 16px;
-  height: 16px;
   fill: var(--secondary-background-color);
 }
 
@@ -371,11 +365,9 @@ address {
 }
 
 .customers-icon {
-  width: 104px;
-  height: 56px;
   fill: var(--subtle-text);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--cubic);
 }
 
 .customers .item {
@@ -392,7 +384,7 @@ address {
   height: 88px;
   width: 100%;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms var(--cubic);
 }
 
 .customers .link:is(:hover, :focus) {
@@ -430,7 +422,7 @@ address {
 }
 
 .portfolio .link {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--cubic);
 }
 
 .portfolio .link:is(:hover, :focus) {
@@ -468,7 +460,7 @@ address {
   cursor: pointer;
   border: 1px solid transparent;
 
-  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 2500ms var(--cubic);
 }
 
 .button.hero-btn {
@@ -491,7 +483,7 @@ address {
   border-color: var(--cornflower-color);
   border-radius: 4px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
 .button.filter-btn:is(:hover, :focus) {
@@ -552,15 +544,69 @@ address {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--cubic);
 }
 
 .footer-social-media-icon {
-  width: 24px;
-  height: 24px;
   fill: var(--secondary-background-color);
 }
 
 .footer-social-media-link:is(:hover, :focus) {
   background-color: var(--success);
+}
+
+/* Backdrop + Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 576px;
+  min-width: 408px;
+
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--cornflower-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
+}
+
+.modal-close-btn:is(:hover, :focus) {
+  background: var(--color-for-interactive-elements);
+  fill: var(--color-white);
 }

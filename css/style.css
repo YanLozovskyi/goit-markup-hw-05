@@ -469,6 +469,27 @@ address {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-top-text {
+  position: absolute;
+  top: 0;
+  color: var(--secondary-background-color);
+  background-color: rgb(77, 90, 229, 0.9) ;
+  height: 100%;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  overflow: auto;
+  transition: transform 250ms var(--cubic);
+}
+
+.portfolio-link:is(:hover, :focus) .portfolio-top-text {
+  transform: translateY(0);
+}
+
 .portfolio-title {
   margin-bottom: 8px;
 }
@@ -614,14 +635,22 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   min-height: 576px;
   min-width: 408px;
+  transform: translate(-50%, -50%) scaleY(1);
+  opacity: 1;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform 2500ms var(--cubic), opacity 2500ms var(--cubic);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+  opacity: 0;
 }
 
 .modal-close-btn {

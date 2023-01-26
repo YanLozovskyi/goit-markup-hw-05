@@ -98,7 +98,7 @@ address {
   padding-bottom: 120px;
 }
 
-.section-subtitle .title {
+.sub-title {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
@@ -271,16 +271,16 @@ address {
   padding-bottom: 0;
 }
 
-.company-benefits .title {
+.company-benefits-title {
   margin-bottom: 8px;
 }
 
-.company-benefits .list {
+.company-benefits-list {
   display: flex;
   gap: 24px;
 }
 
-.company-benefits .item {
+.company-benefits-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
@@ -326,12 +326,12 @@ address {
   margin-bottom: 72px;
 }
 
-.company-products .list {
+.company-products-list {
   display: flex;
   gap: 24px;
 }
 
-/* about team */
+/* Owr team */
 
 .owr-team {
   background-color: var(--secondary-background-color);
@@ -341,21 +341,26 @@ address {
   margin-bottom: 72px;
 }
 
-.owr-team .title {
+.owr-team-title {
   margin-bottom: 8px;
 }
 
-.owr-team .list {
+.owr-team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.owr-team-text {
+  margin-bottom: 8px;
+}
+
+.team-social-media-list {
   display: flex;
   gap: 24px;
   justify-content: center;
 }
 
-.owr-team .text {
-  margin-bottom: 8px;
-}
-
-.team-social-meadia-list .link {
+.team-social-media-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,7 +372,7 @@ address {
   transition: background-color 250ms var(--cubic);
 }
 
-.team-social-meadia-list .link:is(:hover, :focus) {
+.team-social-media-link:is(:hover, :focus) {
   background-color: var(--color-for-interactive-elements);
 }
 
@@ -391,7 +396,7 @@ address {
   margin-bottom: 72px;
 }
 
-.customers .list {
+.customers-list {
   display: flex;
   gap: 24px;
 }
@@ -402,11 +407,11 @@ address {
   transition: fill 250ms var(--cubic);
 }
 
-.customers .item {
+.customers-item {
   width: 168px;
 }
 
-.customers .link {
+.customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,11 +424,11 @@ address {
   transition: border-color 250ms var(--cubic);
 }
 
-.customers .link:is(:hover, :focus) {
+.customers-link:is(:hover, :focus) {
   border-color: var(--accent-color);
 }
 
-.link:is(:hover, :focus) .customers-icon {
+.customers-link:is(:hover, :focus) .customers-icon {
   fill: var(--accent-color);
 }
 
@@ -441,33 +446,34 @@ address {
   gap: 24px;
 }
 
-.portfolio .section-subtitle {
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
 }
 
-.portfolio .item {
+.portfolio-item {
   width: calc((100% - 2 * 24px) / 3);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio .link {
+.portfolio-link {
+  display: inline-block;
   transition: box-shadow 250ms var(--cubic);
 }
 
-.portfolio .link:is(:hover, :focus) {
+.portfolio-link:is(:hover, :focus) {
   display: inline-block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio .title {
+.portfolio-title {
   margin-bottom: 8px;
 }
 
-.portfolio .text {
+.portfolio-text {
   color: var(--primary-text-color);
 }
 

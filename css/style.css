@@ -122,10 +122,6 @@ address {
   margin-right: auto;
 }
 
-.header .link {
-  display: inline-block;
-}
-
 /* logo */
 
 .logo {
@@ -164,19 +160,56 @@ address {
   margin-left: 40px;
 } */
 
-.site-nav .link {
+.site-nav-link {
+  position: relative;
   color: var(--title-text-color);
   font-weight: 500;
-  display: block;
+  display: inline-block;
   padding: 24px 0;
 
   transition: color 250ms var(--cubic);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:is(:hover, :focus) {
   color: var(--color-for-interactive-elements);
 }
+
+.active-underline {
+  color: var(--color-for-interactive-elements);
+}
+
+.active-underline::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-for-interactive-elements);
+}
+
+/* .site-nav .link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-for-interactive-elements);
+
+  transform: scaleX(0);
+  transition: transform 250ms var(--cubic);
+}
+
+.site-nav .link:is(:hover, :focus)::after {
+  transform: scaleX(1);
+} */
 
 /* Address */
 
@@ -184,7 +217,7 @@ address {
   margin-left: auto;
 }
 
-.adress {
+.address-list {
   display: flex;
   gap: 40px;
 }
@@ -193,14 +226,13 @@ address {
   margin-left: 40px;
 } */
 
-.adress .link {
+.address-link {
   color: var(--primary-text-color);
 
   transition: color 250ms var(--cubic);
 }
 
-.adress .link:hover,
-.adress .link:focus {
+.address-link:is(:hover, :focus) {
   color: var(--accent-color);
 }
 

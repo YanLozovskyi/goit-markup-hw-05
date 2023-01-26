@@ -478,7 +478,7 @@ address {
   position: absolute;
   top: 0;
   color: var(--secondary-background-color);
-  background-color: rgb(77, 90, 229, 0.9) ;
+  background-color: rgb(77, 90, 229, 0.9);
   height: 100%;
   padding: 40px 32px;
   transform: translateY(100%);
@@ -623,6 +623,7 @@ address {
   width: 100vw;
   height: 100vh;
   background: rgba(46, 47, 66, 0.4);
+  transition: visibility 250ms var(--cubic), opacity 2500ms var(--cubic);
 }
 
 .backdrop.is-hidden {
@@ -645,7 +646,7 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 2500ms var(--cubic), opacity 2500ms var(--cubic);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .backdrop.is-hidden .modal {

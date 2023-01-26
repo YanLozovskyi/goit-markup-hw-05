@@ -623,7 +623,7 @@ address {
   width: 100vw;
   height: 100vh;
   background: rgba(46, 47, 66, 0.4);
-  transition: visibility 250ms var(--cubic), opacity 2500ms var(--cubic);
+  transition: visibility 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .backdrop.is-hidden {
